@@ -1,0 +1,128 @@
+[
+    {
+        "src": "https://www.googletagmanager.com/ns.html?id=GTM-NGGN5FB",
+        "height": "0",
+        "width": "0",
+        "style": "display: none; visibility: hidden"
+    },
+    {
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js",
+        "integrity": "sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==",
+        "crossorigin": "anonymous"
+    },
+    {
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js",
+        "defer": ""
+    },
+    {
+        "src": "https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
+        "integrity": "sha512-LrJJK9NmTPmjokVoGXMld0t07DLeTlrClplAmTrlWAiFpzAlSqT24psmm+SxETRGkVCRypSCsXyNMj8uuqkDzQ==",
+        "crossorigin": "anonymous"
+    },
+    {
+        "src": "https://www.google.com/recaptcha/api.js?render=6LemiyEaAAAAAGwb4nR8oX38fxyM36xjIGbwz6d4"
+    },
+    {
+        "rel": [
+            "alternate"
+        ],
+        "href": "https://www.cfcunderwriting.com/en-gb/",
+        "hreflang": "en-gb"
+    },
+    {
+        "rel": [
+            "alternate"
+        ],
+        "href": "https://www.cfcunderwriting.com/en-gb/",
+        "hreflang": "x-default"
+    },
+    {
+        "rel": [
+            "alternate"
+        ],
+        "href": "https://www.cfcunderwriting.com/en-us/",
+        "hreflang": "en-us"
+    },
+    {
+        "rel": [
+            "alternate"
+        ],
+        "href": "https://www.cfcunderwriting.com/en-ca/",
+        "hreflang": "en-ca"
+    },
+    {
+        "rel": [
+            "alternate"
+        ],
+        "href": "https://www.cfcunderwriting.com/en-au/",
+        "hreflang": "en-au"
+    },
+    {
+        "rel": [
+            "canonical"
+        ],
+        "href": "https://www.cfcunderwriting.com/en-gb/"
+    },
+    {
+        "rel": [
+            "stylesheet"
+        ],
+        "href": "https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700"
+    },
+    {
+        "rel": [
+            "stylesheet"
+        ],
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css",
+        "integrity": "sha512-OR8Euhmq4gV888iCkbNer/K4vFpUJ1WEmQrlUqhl/WgjDF2ysVzYnbkM4r+g4KN5B0cYYrQ4D0uvPzb2cFoQVg==",
+        "crossorigin": "anonymous"
+    },
+    {
+        "rel": [
+            "stylesheet"
+        ],
+        "href": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    },
+    {
+        "href": "https://resource.cfcunderwriting.com/cyber-ir-app",
+        "class": [
+            "link",
+            "single-box"
+        ]
+    },
+    {
+        "href": "https://twitter.com/cfcunderwriting",
+        "class": [
+            "icon"
+        ],
+        "target": "_blank"
+    },
+    {
+        "href": "https://www.facebook.com/cfcspecialistinsurance",
+        "class": [
+            "icon"
+        ],
+        "target": "_blank"
+    },
+    {
+        "href": "https://www.linkedin.com/company/cfc-underwriting-ltd",
+        "class": [
+            "icon"
+        ],
+        "target": "_blank"
+    },
+    {
+        "href": "https://www.youtube.com/user/CFCUnderwriting",
+        "class": [
+            "icon"
+        ],
+        "target": "_blank"
+    },
+    {
+        "href": "https://www.instagram.com/cfc_underwriting/",
+        "class": [
+            "icon"
+        ],
+        "target": "_blank"
+    }
+]
