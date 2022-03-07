@@ -10,15 +10,16 @@ def main():
 
     soup = BeautifulSoup(index_page.content, "html.parser")
 
-    json_list = []
+    # Construct list of dicts containing attributes of each element containing a link to an external resource
+    ext_res_dict_list = []
     for tag in soup.find_all(src=re.compile('^http')):
-        json_list.append(tag.attrs)
+        ext_res_dict_list.append(tag.attrs)
     for tag in soup.find_all(href=re.compile('^http')):
-        json_list.append(tag.attrs)
+        ext_res_dict_list.append(tag.attrs)
 
+    # Write dict list to json file
     with open('resources.json', 'w', encoding='utf-8') as f:
-        json.dump(json_list, f, ensure_ascii=False, indent=4)
-
+        json.dump(ext_res_dict_list, f, ensure_ascii=False, indent=4)
 
     # hyperlinks = soup.findAll('a')
 
