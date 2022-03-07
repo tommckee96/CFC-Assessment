@@ -13,10 +13,11 @@ def main():
 
     write_external_resources_to_json_file(soup)
 
-    # Enumerate the hyperlinks
-    privacy_policy = get_privacy_policy_url(soup)
+    privacy_policy_subdirectory = get_privacy_policy_subdirectory(soup)
 
-    print(privacy_policy)
+    privacy_policy_url = CONST_INDEX_URL + privacy_policy_subdirectory
+
+    print(privacy_policy_url)
 
 
 def write_external_resources_to_json_file(soup):
@@ -34,8 +35,8 @@ def write_external_resources_to_json_file(soup):
         json.dump(ext_res_dict_list, f, ensure_ascii=False, indent=4)
 
 
-def get_privacy_policy_url(soup):
-    """Returns the href of the privacy policy
+def get_privacy_policy_subdirectory(soup):
+    """Returns the subdirectory of the privacy policy
 
     Parameters:
         :bs4.BeautifulSoup - soup object representation of the whole page
