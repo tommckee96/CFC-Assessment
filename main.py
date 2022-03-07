@@ -21,13 +21,26 @@ def main():
     with open('resources.json', 'w', encoding='utf-8') as f:
         json.dump(ext_res_dict_list, f, ensure_ascii=False, indent=4)
 
-    # hyperlinks = soup.findAll('a')
+    # Enumerate the hyperlinks
+    get_privacy_policy_url(soup)
 
-    # print(hyperlinks)
 
-    # privacy_policy_html_elem = soup.find("a", string="Privacy policy")
-    # privacy_policy_url = index_url + privacy_policy_html_elem['href']
-    # print(privacy_policy_url)
+def get_privacy_policy_url(soup):
+    """Returns the href of the privacy policy
+
+    Parameters:
+        :bs4.BeautifulSoup - soup object representation of the whole page
+
+    Returns:
+        :string - the href of the privacy policy
+    """
+
+    print(type(soup))
+    hyperlinks = soup.find_all('a')
+
+    for i in range(len(hyperlinks)):
+        if hyperlinks[i].text.lower() == 'privacy policy':
+            return hyperlinks[i]['href']
 
 
 main()
