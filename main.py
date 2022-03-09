@@ -12,21 +12,29 @@ CONST_WORD_FREQUENCY_COUNT_FILENAME = 'word_frequency_count.json'
 
 
 def main():
+    # Scrape index webpage and parse to BeautifulSoup object
     index_page = requests.get(CONST_INDEX_URL)
     index_page_soup = BeautifulSoup(index_page.content, "html.parser")
 
+    # Write list of all external resources to JSON output file
     write_external_resources_to_json_file(index_page_soup, CONST_EXTERNAL_RESOURCES_LIST_FILENAME)
 
+    # Enumerate page's hyperlinks and retrieve the URL of the privacy policy page
     privacy_policy_subdirectory = get_privacy_policy_subdirectory(index_page_soup)
-
     privacy_policy_url = CONST_INDEX_URL + privacy_policy_subdirectory
-
+    
+    # Scrape privacy policy page and parse to BeautifulSoup object
     privacy_policy_page = requests.get(privacy_policy_url)
     privacy_policy_page_soup = BeautifulSoup(privacy_policy_page.content, "html.parser")
 
-    main_soup = privacy_policy_page_soup.find(id='main')
+    # Retrieve all static text on the page (newsletter section excluded)
+    privacy_policy_content = privacy_policy_page_soup.find(id='main')
+    sitemap = privacy_policy_page_soup.find(class_='sitemap')
+    header = privacy_policy_page_soup.find(id='header')
+    text = privacy_policy_content.text + ' ' + sitemap.text + ' ' + header.text
 
-    generate_frequency_count(main_soup.text, CONST_WORD_FREQUENCY_COUNT_FILENAME)
+    # Write case-insensitive frequency count to JSON file
+    generate_frequency_count(text, CONST_WORD_FREQUENCY_COUNT_FILENAME)
 
 
 def generate_frequency_count(text, json_filename):
